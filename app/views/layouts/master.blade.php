@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Bootstrap, from Twitter</title>
+        <title>{{ (isset($title) ? "$title -" : '') }} tools.io</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -46,6 +46,9 @@
                             <li class="nav-header">Network</li>
                             <li class="{{(Request::is('network/ip/port')? 'active' : '')}}">
                                 {{HTML::linkAction('IPController@getPort', 'Port Status')}}
+                            </li>
+                            <li class="{{(Request::is('network/ip/ping')? 'active' : '')}}">
+                                {{HTML::linkAction('IPController@getPing', 'Ping IP Address')}}
                             </li>
                         </ul>
                     </div>
