@@ -59,9 +59,10 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
-        var socket = io.connect('http://' + location.host);
+        var socket = io.connect('http://tools.io/');
         console.log(socket);
         socket.on('hop', function (data) {
+            console.log(data);
             var hop = data.split(" "),
                 element = "#e" + hop[0];
 
