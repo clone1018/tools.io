@@ -59,7 +59,7 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
-        var socket = io.connect(location.host);
+        var socket = io.connect('http://' + location.host);
         console.log(socket);
         socket.on('hop', function (data) {
             var hop = data.split(" "),
