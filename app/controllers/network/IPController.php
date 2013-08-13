@@ -14,4 +14,10 @@ class IPController extends BaseController {
         ));
     }
 
+    public function getMtr() {
+        return View::make('network/ip/mtr', array(
+            'title' => 'MTR'
+        ));
+    }
+
 }

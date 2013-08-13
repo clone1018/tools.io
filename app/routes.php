@@ -14,6 +14,7 @@
 
 Route::get('/', 'HomeController@getIndex');
 Route::controller('/network/ip', 'IPController');
+Route::controller('/website', 'WebsiteController');
 
 Route::group(array('prefix' => 'api/v0', 'before' => 'api'), function () {
     Route::controller('network/ip', 'Api\VersionZero\Network\IPController');

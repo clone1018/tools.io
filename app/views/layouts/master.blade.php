@@ -29,11 +29,6 @@
             }
         </style>
         <link href="/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-        <script src="/assets/js/html5shiv.js"></script>
-        <![endif]-->
     </head>
 
     <body>
@@ -50,6 +45,14 @@
                             <li class="{{(Request::is('network/ip/ping')? 'active' : '')}}">
                                 {{HTML::linkAction('IPController@getPing', 'Ping IP Address')}}
                             </li>
+                            <li class="{{(Request::is('network/ip/mtr')? 'active' : '')}}">
+                                {{HTML::linkAction('IPController@getMtr', 'Traceroute')}}
+                            </li>
+
+                            <!--<li class="nav-header">Website</li>
+                            <li class="{{(Request::is('website/monitor')? 'active' : '')}}">
+                                {{HTML::linkAction('WebsiteController@getMonitor', 'Uptime Monitor')}}
+                            </li>-->
                         </ul>
                     </div>
                     <!--/.well -->
@@ -75,7 +78,8 @@
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="/assets/js/jquery.js"></script>
-        <script Src="/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/js/modernizr.custom.34693.js"></script>
 
         @yield('scripts')
 
